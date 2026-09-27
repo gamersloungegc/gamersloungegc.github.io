@@ -53,3 +53,152 @@
 .room-card p {
     font-size: 16px !important;
 }
+/* ================================
+   GAMERS LOUNGE ANIMATIONS
+================================ */
+
+.hero-copy {
+    animation: heroReveal 1s ease-out both;
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Red background glow */
+.hero::before {
+    animation: redPulse 4s ease-in-out infinite;
+}
+
+@keyframes redPulse {
+    0%, 100% {
+        transform: translateY(-50%) scale(1);
+        opacity: .5;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+.btn {
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 15px rgba(229, 9, 20, .5),
+        0 0 35px rgba(229, 9, 20, .25);
+}
+
+/* Gaming cards */
+.feature-card {
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 0 20px rgba(229, 9, 20, .3),
+        0 0 45px rgba(229, 9, 20, .12);
+}
+
+/* Icons */
+.feature-icon {
+    transition:
+        transform .4s ease,
+        filter .4s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.2) rotate(7deg);
+
+    filter:
+        drop-shadow(0 0 10px rgba(229, 9, 20, .8));
+}
+
+/* Gallery */
+.room-card {
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(229, 9, 20, .25);
+}
+
+.room-card img {
+    transition: transform .6s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Price glow */
+.price {
+    animation: priceGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes priceGlow {
+    from {
+        text-shadow: 0 0 5px rgba(229, 9, 20, .2);
+    }
+
+    to {
+        text-shadow:
+            0 0 10px rgba(229, 9, 20, .7),
+            0 0 25px rgba(229, 9, 20, .35);
+    }
+}
+
+/* Section red text */
+.section-title span {
+    animation: redTextGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes redTextGlow {
+    from {
+        text-shadow: 0 0 3px rgba(229, 9, 20, .2);
+    }
+
+    to {
+        text-shadow:
+            0 0 10px rgba(229, 9, 20, .7),
+            0 0 25px rgba(229, 9, 20, .3);
+    }
+}
+
+/* Logo */
+.logo {
+    transition:
+        transform .3s ease,
+        filter .3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 8px rgba(229, 9, 20, .8));
+}
